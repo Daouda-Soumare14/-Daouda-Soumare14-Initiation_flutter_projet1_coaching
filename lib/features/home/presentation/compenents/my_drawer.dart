@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../auth/presentation/cubits/auth_cubit.dart';
+import '../../../profile/presentation/pages/profile_page.dart';
 import 'my_drawer_tile.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -51,11 +52,11 @@ class MyDrawer extends StatelessWidget {
                     String? uid = user!.uid;
 
                     // navigate to profile page
-                    // Navigator.push(context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => ProfilePage(uid: uid)
-                    //   ),
-                    // );
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfilePage(uid: uid,)
+                      ),
+                    );
                   }),
 
               // search tile
